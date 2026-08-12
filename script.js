@@ -1,9 +1,115 @@
+const projectCaseStudies = {
+  barangay: {
+    type: 'PROJECT 01 / CAPSTONE PROJECT',
+    title: 'e-Barangay Management System',
+    description: 'A digital platform designed to automate and streamline operations for local government units in the Philippines.',
+    overview: 'A digital platform meant to simplify barangay services, transactions, and citizen assistance for faster community operations.',
+    role: [
+      'UI/UX: Responsive interface design',
+      'Backend: PHP & MySQL implementation',
+      'Database: System data structure and management',
+      'Testing: Debugging and validation',
+      'Documentation: Technical project records'
+    ],
+    tags: ['UI/UX', 'PHP', 'MySQL', 'Responsive', 'Testing'],
+    gallery: [
+      { src: 'gradpic.jpg', alt: 'Barangay dashboard', caption: 'Barangay dashboard' },
+      { src: 'gradpic.jpg', alt: 'Citizen services', caption: 'Citizen service module' },
+      { src: 'gradpic.jpg', alt: 'Admin operations', caption: 'Admin operations page' },
+      { src: 'gradpic.jpg', alt: 'Document flow', caption: 'Record and request flow' },
+      { src: 'gradpic.jpg', alt: 'Transactions', caption: 'Monitor transactions' },
+      { src: 'gradpic.jpg', alt: 'Project summary', caption: 'Project summary' }
+    ]
+  },
+  delivery: {
+    type: 'PROJECT 02 / FREELANCE / PROTOTYPE',
+    title: 'Better Boneless — Delivery App',
+    description: 'A mobile or web tool that lets you order food, groceries, or packages from your phone.',
+    overview: 'A concept delivery app designed to make ordering convenience items simpler through a clean user journey and prototype-based interaction design.',
+    role: [
+      'UI/UX: User journey and flow design',
+      'Prototype: App interface concept',
+      'Branding: Visual direction and mockups',
+      'Testing: Interaction review and refinements',
+      'Presentation: Concept showcase design'
+    ],
+    tags: ['Figma', 'Canva', 'Prototype', 'UX', 'Mobile UI'],
+    gallery: [
+      { src: 'coding.jpg', alt: 'Mobile app dashboard', caption: 'App dashboard' },
+      { src: 'coding2.jpg', alt: 'Shopping flow', caption: 'Order flow' },
+      { src: 'device.jpg', alt: 'Product listing', caption: 'Product selection' },
+      { src: 'event.jpg', alt: 'Checkout screen', caption: 'Checkout experience' },
+      { src: 'event2.jpg', alt: 'User status', caption: 'Delivery tracking' },
+      { src: 'finish.jpg', alt: 'Brand concept', caption: 'Brand concept board' }
+    ]
+  },
+  blender: {
+    type: 'PROJECT 03 / ACADEMIC PROJECT',
+    title: 'Dining Set Table Scene',
+    description: 'A 3D dining set table scene created in Blender, demonstrating foundational 3D modeling, scene composition, and object placement.',
+    overview: 'An academic 3D design project focused on building a complete dining environment with materials, lighting, and composition for realistic presentation.',
+    role: [
+      '3D Modeling: Dining set and objects',
+      'Scene Composition: layout and balance',
+      'Lighting: Mood and material realism',
+      'Rendering: Final visual presentation',
+      'Design Review: Iteration and improvements'
+    ],
+    tags: ['Blender', 'Rendering', '3D Design', 'Modeling', 'Visualization'],
+    gallery: [
+      { src: 'device.jpg', alt: 'Dining table scene', caption: 'Dining set scene' },
+      { src: 'coding.jpg', alt: '3D layout', caption: 'Object arrangement' },
+      { src: 'coding2.jpg', alt: 'Material test', caption: 'Material study' },
+      { src: 'event.jpg', alt: 'Lighting setup', caption: 'Lighting composition' },
+      { src: 'event2.jpg', alt: 'Final render', caption: 'Final render preview' },
+      { src: 'finish.jpg', alt: 'Academic showcase', caption: 'Academic showcase' }
+    ]
+  }
+};
+
+function renderCaseStudy() {
+  const params = new URLSearchParams(window.location.search);
+  const projectKey = params.get('project') || 'barangay';
+  const project = projectCaseStudies[projectKey] || projectCaseStudies.barangay;
+
+  const typeEl = document.querySelector('[data-project-type]');
+  const titleEl = document.querySelector('[data-project-title]');
+  const descriptionEl = document.querySelector('[data-project-description]');
+  const overviewEl = document.querySelector('[data-project-overview]');
+  const roleEl = document.querySelector('[data-project-role]');
+  const tagsEl = document.querySelector('[data-project-tags]');
+  const galleryEl = document.querySelector('[data-project-gallery]');
+
+  if (typeEl) typeEl.textContent = project.type;
+  if (titleEl) titleEl.textContent = project.title;
+  if (descriptionEl) descriptionEl.textContent = project.description;
+  if (overviewEl) overviewEl.textContent = project.overview;
+  if (roleEl) {
+    roleEl.innerHTML = project.role.map(item => `<li>${item}</li>`).join('');
+  }
+  if (tagsEl) {
+    tagsEl.innerHTML = project.tags.map(tag => `<span>${tag}</span>`).join('');
+  }
+  if (galleryEl) {
+    galleryEl.innerHTML = project.gallery.map((item) => `
+      <figure class="project-snap">
+        <img src="${item.src}" alt="${item.alt}" />
+        <figcaption>${item.caption}</figcaption>
+      </figure>
+    `).join('');
+  }
+
+  document.title = `${project.title} — Case Study`;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const year = new Date().getFullYear();
   const yearEl = document.getElementById('year');
   if (yearEl) {
     yearEl.textContent = year;
   }
+
+  renderCaseStudy();
 
   const menuButton = document.querySelector('.menu-button');
   const navLinks = document.querySelector('.nav-links');
