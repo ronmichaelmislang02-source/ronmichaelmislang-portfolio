@@ -57,12 +57,12 @@ const projectCaseStudies = {
     ],
     tags: ['Blender', 'Rendering', '3D Design', 'Modeling', 'Visualization'],
     gallery: [
-      { src: 'device.jpg', alt: 'Dining table scene', caption: 'Dining set scene' },
-      { src: 'coding.jpg', alt: '3D layout', caption: 'Object arrangement' },
-      { src: 'coding2.jpg', alt: 'Material test', caption: 'Material study' },
-      { src: 'event.jpg', alt: 'Lighting setup', caption: 'Lighting composition' },
-      { src: 'event2.jpg', alt: 'Final render', caption: 'Final render preview' },
-      { src: 'finish.jpg', alt: 'Academic showcase', caption: 'Academic showcase' }
+      { src: 'Dining set scene.png', alt: 'Dining table scene', caption: 'Dining set scene' },
+      { src: 'Lighting composition.png', alt: '3D layout', caption: 'Lighting composition' },
+      { src: 'Material study.png', alt: 'Material test', caption: 'Material study' },
+      { src: 'Close Up Shot.png', alt: 'Lighting setup', caption: 'Close Up Shot' },
+      { src: 'Sideview.png', alt: 'Final render', caption: 'Side View' },
+      { src: 'Top View.png', alt: 'Academic showcase', caption: 'Top View' }
     ]
   }
 };
