@@ -35,12 +35,12 @@ const projectCaseStudies = {
     ],
     tags: ['Figma', 'Canva', 'Prototype', 'UX', 'Mobile UI'],
     gallery: [
-      { src: 'coding.jpg', alt: 'Mobile app dashboard', caption: 'App dashboard' },
-      { src: 'coding2.jpg', alt: 'Shopping flow', caption: 'Order flow' },
-      { src: 'device.jpg', alt: 'Product listing', caption: 'Product selection' },
-      { src: 'event.jpg', alt: 'Checkout screen', caption: 'Checkout experience' },
-      { src: 'event2.jpg', alt: 'User status', caption: 'Delivery tracking' },
-      { src: 'finish.jpg', alt: 'Brand concept', caption: 'Brand concept board' }
+      { src: 'appdashboard.png', alt: 'Mobile app dashboard', caption: 'App dashboard' },
+      { src: 'loginpage.png', alt: 'Shopping flow', caption: 'Login Page' },
+      { src: 'productselection.png', alt: 'Product listing', caption: 'Product selection' },
+      { src: 'orderflow.png', alt: 'Checkout screen', caption: 'Checkout experience' },
+      { src: 'delivery tracking.png', alt: 'User status', caption: 'Delivery tracking' },
+      { src: 'purchase record.png', alt: 'Brand concept', caption: 'Brand concept board' }
     ]
   },
   blender: {
