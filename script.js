@@ -13,12 +13,12 @@ const projectCaseStudies = {
     ],
     tags: ['UI/UX', 'PHP', 'MySQL', 'Responsive', 'Testing'],
     gallery: [
-      { src: 'gradpic.jpg', alt: 'Barangay dashboard', caption: 'Barangay dashboard' },
-      { src: 'gradpic.jpg', alt: 'Citizen services', caption: 'Citizen service module' },
-      { src: 'gradpic.jpg', alt: 'Admin operations', caption: 'Admin operations page' },
-      { src: 'gradpic.jpg', alt: 'Document flow', caption: 'Record and request flow' },
-      { src: 'gradpic.jpg', alt: 'Transactions', caption: 'Monitor transactions' },
-      { src: 'gradpic.jpg', alt: 'Project summary', caption: 'Project summary' }
+      { src: 'residentdashboard.png', alt: 'Barangay dashboard', caption: 'Resident dashboard' },
+      { src: 'AdminDashboard.png', alt: 'Citizen services', caption: 'Admin Dashboard' },
+      { src: 'Family Member List.png', alt: 'Admin operations', caption: 'Admin operations page' },
+      { src: 'RESIDENT LIST (EDIT INFO SECTION).png', alt: 'Document flow', caption: 'Resident List (EDIT INFO SECTION)' },
+      { src: 'AuditTrail.png', alt: 'Transactions', caption: 'Monitor Audit Trail' },
+      { src: 'populationDashboard.png', alt: 'Project summary', caption: 'Population Report' }
     ]
   },
   delivery: {
@@ -33,14 +33,14 @@ const projectCaseStudies = {
       'Testing: Interaction review and refinements',
       'Presentation: Concept showcase design'
     ],
-     tags: ['UI/UX', 'PHP', 'MySQL', 'Responsive', 'Testing'],
+    tags: ['Figma', 'Canva', 'Prototype', 'UX', 'Mobile UI'],
     gallery: [
-      { src: 'residentdashboard.png', alt: 'Barangay dashboard', caption: 'Resident dashboard' },
-      { src: 'AdminDashboard.png', alt: 'Citizen services', caption: 'Admin Dashboard' },
-      { src: 'Family Member List.png', alt: 'Admin operations', caption: 'Admin operations page' },
-      { src: 'RESIDENT LIST (EDIT INFO SECTION).png', alt: 'Document flow', caption: 'Resident List (EDIT INFO SECTION)' },
-      { src: 'AuditTrail.png', alt: 'Transactions', caption: 'Monitor Audit Trail' },
-      { src: 'populationDashboard.png', alt: 'Project summary', caption: 'Population Report' }
+      { src: 'coding.jpg', alt: 'Mobile app dashboard', caption: 'App dashboard' },
+      { src: 'coding2.jpg', alt: 'Shopping flow', caption: 'Order flow' },
+      { src: 'device.jpg', alt: 'Product listing', caption: 'Product selection' },
+      { src: 'event.jpg', alt: 'Checkout screen', caption: 'Checkout experience' },
+      { src: 'event2.jpg', alt: 'User status', caption: 'Delivery tracking' },
+      { src: 'finish.jpg', alt: 'Brand concept', caption: 'Brand concept board' }
     ]
   },
   blender: {
