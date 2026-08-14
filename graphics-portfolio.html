@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Graphics & Infographics Portfolio — Ron Michael Mislang</title>
+  <meta name="description" content="Ron Michael Mislang's graphics and infographics design portfolio." />
+  <link rel="stylesheet" href="./styles.css" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .graphics-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .graphics-item {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #f5f5f5;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .graphics-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .graphics-item img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .graphics-item img:hover {
+      transform: scale(1.05);
+    }
+
+    .graphics-item-title {
+      padding: 1rem;
+      font-weight: 600;
+      color: #333;
+      font-size: 0.95rem;
+    }
+
+    .graphics-modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      animation: fadeIn 0.3s ease;
+    }
+
+    .graphics-modal.active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .graphics-modal-content {
+      max-width: 90vw;
+      max-height: 90vh;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .graphics-modal img {
+      max-width: 100%;
+      max-height: 80vh;
+      object-fit: contain;
+    }
+
+    .graphics-modal-title {
+      color: white;
+      margin-top: 1rem;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    .graphics-close {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      color: white;
+      font-size: 40px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+      line-height: 1;
+    }
+
+    .graphics-close:hover {
+      color: #ddd;
+    }
+
+    .graphics-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      font-size: 30px;
+      cursor: pointer;
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      padding: 20px;
+      user-select: none;
+      transition: background 0.3s ease;
+    }
+
+    .graphics-nav:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .graphics-prev {
+      left: 20px;
+    }
+
+    .graphics-next {
+      right: 20px;
+    }
+
+    .back-button {
+      margin-bottom: 2rem;
+      display: inline-block;
+    }
+
+    .breadcrumb {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: -1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .breadcrumb a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <span class="logo-mark">RM</span>
+        <span>Ron Michael Mislang</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html#about">About</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <a class="button button-secondary" href="index.html#contact">Download Resume</a>
+      <button class="menu-button" type="button" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" style="padding-top: 2rem;">
+      <div class="container">
+        <a class="button button-secondary" href="index.html#graphics">← Back</a>
+        <div class="breadcrumb">
+          
+        </div>
+        
+        <h1>Graphics & Infographics Portfolio</h1>
+        <p class="section-description">A collection of professional promotional materials, event designs, and infographics created during my internship at PASIA. Click on any image to view it in full size.</p>
+
+        <div class="graphics-gallery">
+          <div class="graphics-item">
+            <img src="example1.png" alt="Sustainability Summit 2026" />
+            <div class="graphics-item-title">Food Streaming Geography - Job Recruitment</div>
+          </div>
+          <div class="graphics-item">
+            <img src="example2.png" alt="ASEAN Logistics Summit 2026" />
+            <div class="graphics-item-title">INCOTERMS - International Trade e-Learning</div>
+          </div>
+          <div class="graphics-item">
+            <img src="example3.png" alt="PASIAWORLD 2026 Announcement" />
+            <div class="graphics-item-title">Basic Purchasing Training - Course Outline</div>
+          </div>
+          <div class="graphics-item">
+            <img src="example4.png" alt="PASIAWORLD 2026 Save the Date" />
+            <div class="graphics-item-title">Free Webinar - Online Procurement Academy</div>
+          </div>
+          <div class="graphics-item">
+            <img src="example5.png" alt="PASIA Golf Event 2026" />
+            <div class="graphics-item-title">Free Webinar - Corporate In-House Training</div>
+          </div>
+          <div class="graphics-item">
+            <img src="example6.png" alt="Annual Logistics Summit 2026" />
+            <div class="graphics-item-title">Chinese New Year 2026 Greeting</div>
+          </div>
+          <div class="graphics-item">
+            <img src="example7.png" alt="GPAS Supplier Assessment" />
+            <div class="graphics-item-title">GPAS - Supplier Assessment Service</div>
+          </div>
+          <div class="graphics-item">
+            <img src="example8.png" alt="PGWAC Warehouse Assessment" />
+            <div class="graphics-item-title">Cold Chain Management - Training Course</div>
+          </div>
+          <div class="graphics-item">
+            <img src="example9.png" alt="Cold Chain Management Training" />
+            <div class="graphics-item-title">PGWAC - Warehouse Assessment & Certification</div>
+          </div>
+          <div class="graphics-item">
+            <img src="example10.png" alt="Chinese New Year 2026 Greeting" />
+            <div class="graphics-item-title">Gpas Infographics</div>
+          </div>
+          <div class="graphics-item">
+            <img src="example11.png" alt="Free Webinar - Corporate Training" />
+            <div class="graphics-item-title">Asean Logistic Summit 2026 Event Poster</div>
+          </div>
+          <div class="graphics-item">
+            <img src="example12.png" alt="Free Webinar - Procurement Academy" />
+            <div class="graphics-item-title">Pasia Golf Save The Date 2026</div>
+          </div>
+          <div class="graphics-item">
+            <img src="example13.png" alt="Basic Purchasing Training Course" />
+            <div class="graphics-item-title">Asean Logistic Summit 2026 Speaker Banner</div>
+          </div>
+          <div class="graphics-item">
+            <img src="example14.png" alt="INCOTERMS Training" />
+            <div class="graphics-item-title">Save The Date</div>
+          </div>
+          <div class="graphics-item">
+            <img src="example15.png" alt="Food Streaming Geography Recruitment" />
+            <div class="graphics-item-title">Ethics & Sustainability Summit 2026</div>
+          </div>
+          <div class="graphics-item">
+            <img src="example16.png" alt="Ethics and Sustainability Summit 2026" />
+            <div class="graphics-item-title">Demand & Supply Planning - Conference</div>
+          </div>
+          <div class="graphics-item">
+            <img src="example17.png" alt="Demand & Supply Planning" />
+            <div class="graphics-item-title">Sustainability Summit 2026</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Image Modal -->
+  <div id="graphicsModal" class="graphics-modal">
+    <button class="graphics-close" onclick="closeModal()">&times;</button>
+    <button class="graphics-nav graphics-prev" onclick="prevImage()">&#10094;</button>
+    <div class="graphics-modal-content">
+      <img id="modalImage" src="" alt="" />
+      <div class="graphics-modal-title" id="modalTitle"></div>
+    </div>
+    <button class="graphics-nav graphics-next" onclick="nextImage()">&#10095;</button>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Ron Michael Mislang. Designed & built with practical IT, web, and digital skills.</p>
+      <div class="footer-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    let currentImageIndex = 0;
+    const images = Array.from(document.querySelectorAll('.graphics-item img'));
+    const imageData = images.map((img, index) => ({
+      src: img.src,
+      title: img.parentElement.querySelector('.graphics-item-title').textContent,
+      index: index
+    }));
+
+    // Add click listeners to all images
+    images.forEach((img, index) => {
+      img.addEventListener('click', () => {
+        currentImageIndex = index;
+        openModal();
+      });
+    });
+
+    function openModal() {
+      const modal = document.getElementById('graphicsModal');
+      const image = imageData[currentImageIndex];
+      document.getElementById('modalImage').src = image.src;
+      document.getElementById('modalTitle').textContent = image.title;
+      modal.classList.add('active');
+    }
+
+    function closeModal() {
+      document.getElementById('graphicsModal').classList.remove('active');
+    }
+
+    function nextImage() {
+      currentImageIndex = (currentImageIndex + 1) % imageData.length;
+      updateModal();
+    }
+
+    function prevImage() {
+      currentImageIndex = (currentImageIndex - 1 + imageData.length) % imageData.length;
+      updateModal();
+    }
+
+    function updateModal() {
+      const image = imageData[currentImageIndex];
+      document.getElementById('modalImage').src = image.src;
+      document.getElementById('modalTitle').textContent = image.title;
+    }
+
+    // Close modal when clicking outside the image
+    document.getElementById('graphicsModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeModal();
+      }
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+      const modal = document.getElementById('graphicsModal');
+      if (modal.classList.contains('active')) {
+        if (e.key === 'ArrowRight') nextImage();
+        if (e.key === 'ArrowLeft') prevImage();
+        if (e.key === 'Escape') closeModal();
+      }
+    });
+  </script>
+</body>
+</html>
