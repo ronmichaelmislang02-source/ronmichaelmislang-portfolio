@@ -815,6 +815,18 @@ img {
   max-width: 500px;
 }
 
+.graphics-cta .button-primary {
+  background: linear-gradient(135deg, #38bdf8, #8b5cf6);
+  color: white;
+  font-size: 1rem;
+  padding: 14px 32px;
+  font-weight: 700;
+}
+
+.graphics-cta .button-primary:hover {
+  background: linear-gradient(135deg, #0ea5e9, #7c3aed);
+}
+
 @media (max-width: 1040px) {
   .hero-grid,
   .about-layout,
